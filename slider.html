@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+<title>slider</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="css/bootstrap-4.1.2/bootstrap.min.css">
+
+<link href="css/owl.carousel.css" rel="stylesheet">
+
+<link rel="stylesheet" type="text/css" href="css/owl.theme.css">
+<!-- <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css"> -->
+<link rel="stylesheet" type="text/css" href="css/slider.css">
+
+</head>
+<body>
+
+	<!--Slider-->
+	<div class="slider">
+		<div class="callbacks_container">
+			<ul class="rslides" id="slider">
+				<li>
+					<div class="slider-img">
+						<table style="width: 100%; min-height: 500px;">
+							<tr>
+								<td rowspan="2" style="background-color: red"></td>
+								<td style="background-color: green"></td>
+								<td style="background-color: yellow"></td>
+							</tr>
+							<tr>
+								<td colspan="2" style="background-color: blue"></td>
+							</tr>
+						</table>
+					</div>
+				</li>
+				<li>
+					<div class="slider-img">
+						<table style="width: 100%; min-height: 500px;">
+							<tr>
+								<td rowspan="2" style="background-color: black"></td>
+								<td style="background-color: #ccc"></td>
+								<td style="background-color: #fcf"></td>
+							</tr>
+							<tr>
+								<td colspan="2" style="background-color: cyan"></td>
+							</tr>
+						</table>
+					</div>
+				</li>
+				<li>
+					<div class="slider-img">
+						<table style="width: 100%; min-height: 500px;">
+							<tr>
+								<td rowspan="2" style="background-color: orange"></td>
+								<td style="background-color: indigo"></td>
+								<td style="background-color: violet"></td>
+							</tr>
+							<tr>
+								<td colspan="2" style="background-color: #fcc"></td>
+							</tr>
+						</table>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+	<!--//Slider-->
+
+<script type='text/javascript' src='js/jquery-2.2.3.min.js'></script>
+<script src="css/bootstrap-4.1.2/popper.js"></script>
+<script src="css/bootstrap-4.1.2/bootstrap.min.js"></script>
+<script src="plugins/greensock/TweenMax.min.js"></script>
+<script src="plugins/greensock/TimelineMax.min.js"></script>
+<script src="plugins/scrollmagic/ScrollMagic.min.js"></script>
+<script src="plugins/greensock/animation.gsap.min.js"></script>
+<script src="plugins/greensock/ScrollToPlugin.min.js"></script>
+<script src="plugins/colorbox/jquery.colorbox-min.js"></script>
+<script src="js/owl.carousel.js"></script>
+<script src="plugins/easing/easing.js"></script>
+<script src="plugins/parallax-js-master/parallax.min.js"></script>
+<script src="js/main.js"></script>
+
+<!-- banner-->
+	<script src="js/responsiveslides.min.js"></script>
+	<script>
+		$(function () {
+			$("#slider").responsiveSlides({
+				auto: true,
+				pager: true,
+				nav: true,
+				speed: 1000,
+				namespace: "callbacks",
+				before: function () {
+					$('.events').append("<li>before event fired.</li>");
+				},
+				after: function () {
+					$('.events').append("<li>after event fired.</li>");
+				}
+			});
+		});
+	</script>
+	<!--// banner-->
+	<!-- requried-jsfiles-for owl -->
+	<script src="js/owl.carousel.js"></script>
+	<script>
+		$(document).ready(function () {
+			$("#owl-demo2").owlCarousel({
+				items: 1,
+				lazyLoad: false,
+				autoPlay: true,
+				navigation: false,
+				navigationText: false,
+				pagination: true,
+			});
+		});
+	</script>
+	<!-- //requried-jsfiles-for owl -->
+</body>
+</html>
